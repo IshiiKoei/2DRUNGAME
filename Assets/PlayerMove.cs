@@ -1,0 +1,56 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlayerMove : MonoBehaviour
+{
+    [SerializeField] private float moveSpeed = 1f;
+    [SerializeField] private float jumpForce = 5f;
+
+    private Rigidbody2D rd;
+
+    private bool isJumping;
+    //private PlayerAnimation playerAnimation;
+    // Start is called before the first frame update
+    void Start()
+    {
+        rd = GetComponent<Rigidbody2D>();
+        //playerAnimation = GetComponent<PlayerAnimation>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        Jump();
+    }
+    private void FixedUpdate()
+    {
+        MovePlayer();
+       // AnimatePlayer();
+    }
+    private void MovePlayer()
+    {
+        rd.velocity = new Vector2(moveSpeed, rd.velocity.y);
+    }
+    private void Jump()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && !isJumping)
+        {
+            isJumping = true;
+            rd.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isJumping = false;
+        }
+    }
+    /*private void AnimatePlayer()
+    {
+        playerAnimation.PlayerJump(rd.velocity.y);
+        playerAnimation.Running(!isJumping);
+    }*/
+}
+
