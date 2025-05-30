@@ -7,6 +7,7 @@ public class PlayerMove : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 1f;
     [SerializeField] private float jumpForce = 5f;
+    [SerializeField] GManager manager;
 
     private Rigidbody2D rd;
     
@@ -55,7 +56,7 @@ public class PlayerMove : MonoBehaviour
         if(collision.gameObject.tag == "gameover")
         {
             Destroy(this.gameObject);
-            
+            manager.GameOver();
         }
     }
     /*private void AnimatePlayer()

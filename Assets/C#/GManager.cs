@@ -9,7 +9,8 @@ public class GManager : MonoBehaviour
     public int score;
     public int stageNum;
     public int continueNum;
-    
+    [SerializeField] GameObject gameoverCanvas;
+    [SerializeField] Transform playerTransform;
 
 
     // Start is called before the first frame update
@@ -26,7 +27,12 @@ public class GManager : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-   
+    public void GameOver()
+    {
+        playerTransform.gameObject.SetActive(false);
+        gameoverCanvas.SetActive(true);
+    }
+  
 }
 
 
