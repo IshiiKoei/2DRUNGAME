@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Build.Content;
 using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
@@ -8,7 +9,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float jumpForce = 5f;
 
     private Rigidbody2D rd;
-
+    
     private bool isJumping;
     //private PlayerAnimation playerAnimation;
     // Start is called before the first frame update
@@ -45,6 +46,16 @@ public class PlayerMove : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isJumping = false;
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+       
+    
+        if(collision.gameObject.tag == "gameover")
+        {
+            Destroy(this.gameObject);
+            
         }
     }
     /*private void AnimatePlayer()

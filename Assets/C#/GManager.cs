@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,8 @@ public class GManager : MonoBehaviour
     public int score;
     public int stageNum;
     public int continueNum;
+    
+
 
     // Start is called before the first frame update
     void Awake()
@@ -23,6 +26,11 @@ public class GManager : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+   
 }
+
+
+
+
 
     
