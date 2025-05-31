@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEditor.Build.Content;
 using UnityEngine;
 
@@ -12,12 +13,14 @@ public class PlayerMove : MonoBehaviour
     private Rigidbody2D rd;
     
     private bool isJumping;
+    private bool isStart;
     //private PlayerAnimation playerAnimation;
     // Start is called before the first frame update
     void Start()
     {
         rd = GetComponent<Rigidbody2D>();
         //playerAnimation = GetComponent<PlayerAnimation>();
+       
     }
 
     // Update is called once per frame
@@ -26,16 +29,33 @@ public class PlayerMove : MonoBehaviour
         Jump();
     }
     private void FixedUpdate()
+    //プレイヤーが自動で動くようにする
     {
         MovePlayer();
-       // AnimatePlayer();
+        
+        // AnimatePlayer();
     }
     private void MovePlayer()
     {
-        rd.velocity = new Vector2(moveSpeed, rd.velocity.y);
+        /*if (Input.GetMouseButtonDown(0) && isStart)
+        {
+            isStart = true;
+        }
+        else if (Input.GetMouseButtonDown(0) && isStart)
+        {
+            isStart = false;
+        }
+        if (isStart)
+        {
+            transform.position -= transform.forward * Time.deltaTime * moveSpeed;
+        }*/
+        
+            rd.velocity = new Vector2(moveSpeed, rd.velocity.y);
+        
     }
     private void Jump()
-    {
+    //ジャンプ関係 (ジャンプ方法、ジャンプ制限)
+    { 
         if (Input.GetKeyDown(KeyCode.Space) && !isJumping)
         {
             isJumping = true;
@@ -49,7 +69,9 @@ public class PlayerMove : MonoBehaviour
             isJumping = false;
         }
     }
+   
     private void OnTriggerEnter2D(Collider2D collision)
+        //gameoverの条件
     {
        
     

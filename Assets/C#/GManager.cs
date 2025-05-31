@@ -11,6 +11,7 @@ public class GManager : MonoBehaviour
     public int continueNum;
     [SerializeField] GameObject gameoverCanvas;
     [SerializeField] Transform playerTransform;
+    [SerializeField] GameObject clickstart;
 
 
     // Start is called before the first frame update
@@ -31,7 +32,13 @@ public class GManager : MonoBehaviour
     {
         playerTransform.gameObject.SetActive(false);
         gameoverCanvas.SetActive(true);
+
     }
+    /*public void Clickstart()
+    {
+        playerTransform.gameObject.SetActive(true );
+        clickstart.SetActive(true);
+    }*/
   
 }
 
