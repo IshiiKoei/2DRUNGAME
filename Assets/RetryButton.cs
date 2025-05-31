@@ -9,6 +9,6 @@ public class RetryButton : MonoBehaviour
    
     public void RetryGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("restrat");
     }
 }

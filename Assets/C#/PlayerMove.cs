@@ -9,24 +9,26 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float moveSpeed = 1f;
     [SerializeField] private float jumpForce = 5f;
     [SerializeField] GManager manager;
+    
 
     private Rigidbody2D rd;
     
     private bool isJumping;
-    private bool isStart;
+    private bool isStop;
     //private PlayerAnimation playerAnimation;
     // Start is called before the first frame update
     void Start()
     {
         rd = GetComponent<Rigidbody2D>();
         //playerAnimation = GetComponent<PlayerAnimation>();
-       
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         Jump();
+        
     }
     private void FixedUpdate()
     //ÉvÉåÉCÉÑÅ[Ç™é©ìÆÇ≈ìÆÇ≠ÇÊÇ§Ç…Ç∑ÇÈ
@@ -50,7 +52,9 @@ public class PlayerMove : MonoBehaviour
             transform.position -= transform.forward * Time.deltaTime * moveSpeed;
         }*/
         
-            rd.velocity = new Vector2(moveSpeed, rd.velocity.y);
+            
+                rd.velocity = new Vector2(moveSpeed, rd.velocity.y);
+            
         
     }
     private void Jump()
