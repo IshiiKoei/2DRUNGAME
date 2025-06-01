@@ -5,10 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class clickstart : MonoBehaviour
 {
-    
+    [SerializeField] GManager manager;
     // Start is called before the first frame update
     public void Restart()
     {
+        
+        SceneManager.LoadScene(0);
         SceneManager.LoadScene("2d");
+        manager.score = 0;
     }
 }

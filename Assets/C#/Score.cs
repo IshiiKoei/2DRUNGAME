@@ -31,5 +31,6 @@ public class Score : MonoBehaviour
             scoreText.text = "Score" + GManager.instance.score;
             oldScore = GManager.instance.score;
         }
+       
     }
 }

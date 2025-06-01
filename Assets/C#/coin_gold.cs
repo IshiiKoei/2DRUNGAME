@@ -24,4 +24,8 @@ public class coin_gold : MonoBehaviour
             }
         }
     }
+    public void Reset()
+    {
+        Destroy(GManager.instance);
+    }
 }

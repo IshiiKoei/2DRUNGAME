@@ -11,7 +11,7 @@ public class coin_bronze : MonoBehaviour
     {
         
     }
-    
+
     // Update is called once per frame
     void Update()
     {
@@ -22,6 +22,12 @@ public class coin_bronze : MonoBehaviour
                 GManager.instance.score += myScore;
                 Destroy(this.gameObject);
             }
-        }    
+        }
+    }
+
+        public void Reset()
+    {
+        Destroy(GManager.instance);
     }
 }
+

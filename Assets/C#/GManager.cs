@@ -11,12 +11,13 @@ public class GManager : MonoBehaviour
     public int continueNum;
     [SerializeField] GameObject gameoverCanvas;
     [SerializeField] Transform playerTransform;
-    [SerializeField] GameObject clickstart;
+    //[SerializeField] GameObject clickstart;
 
 
     // Start is called before the first frame update
     void Awake()
     {
+        score = 0;
         if (instance == null)
         {
 
@@ -27,11 +28,13 @@ public class GManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+        
     }
     public void GameOver()
     {
         playerTransform.gameObject.SetActive(false);
         gameoverCanvas.SetActive(true);
+        score = 0;
 
     }
     /*public void Clickstart()

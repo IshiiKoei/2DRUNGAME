@@ -12,7 +12,7 @@ public class PlayerMove : MonoBehaviour
     
 
     private Rigidbody2D rd;
-    
+    public int score;
     private bool isJumping;
     private bool isStop;
     //private PlayerAnimation playerAnimation;
@@ -82,6 +82,7 @@ public class PlayerMove : MonoBehaviour
         if(collision.gameObject.tag == "gameover")
         {
             Destroy(this.gameObject);
+            //manager.score = 0;
             manager.GameOver();
         }
     }

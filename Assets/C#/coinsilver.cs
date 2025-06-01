@@ -25,5 +25,9 @@ public class coinsilver : MonoBehaviour
             }
         }
     }
+    public void Reset()
+    {
+        Destroy(GManager.instance);
+    }
 }
 
