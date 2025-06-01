@@ -14,10 +14,18 @@ public class GManager : MonoBehaviour
     //[SerializeField] GameObject clickstart;
 
 
+
     // Start is called before the first frame update
-    void Awake()
+
+    private void Start()
     {
         score = 0;
+    }
+    void Awake()
+    {
+       
+        
+        
         if (instance == null)
         {
 
@@ -34,7 +42,7 @@ public class GManager : MonoBehaviour
     {
         playerTransform.gameObject.SetActive(false);
         gameoverCanvas.SetActive(true);
-        score = 0;
+        
 
     }
     /*public void Clickstart()
