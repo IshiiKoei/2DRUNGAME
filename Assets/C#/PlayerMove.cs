@@ -21,7 +21,7 @@ public class PlayerMove : MonoBehaviour
     {
         rd = GetComponent<Rigidbody2D>();
         //playerAnimation = GetComponent<PlayerAnimation>();
-        
+        manager.score = 0;
     }
 
     // Update is called once per frame
@@ -74,15 +74,16 @@ public class PlayerMove : MonoBehaviour
         }
     }
    
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
         //gameoverÇÃèåè
     {
        
     
         if(collision.gameObject.tag == "gameover")
         {
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
             //manager.score = 0;
+            this.gameObject.GetComponent<Renderer>().enabled = false;
             manager.GameOver();
         }
     }

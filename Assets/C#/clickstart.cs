@@ -6,14 +6,23 @@ using UnityEngine.SceneManagement;
 public class clickstart : MonoBehaviour
 {
     [SerializeField] GManager manager;
+    
      void Start()
     {
+        //manager.score = 0;
+    } 
+    /*void Update()
+    {
         manager.score = 0;
-    }
+    */
     // Start is called before the first frame update
     public void Restart()
     {
+        int resetscore;
+        resetscore = manager.score;
+        resetscore = 0;
+        Debug.Log(resetscore);
         SceneManager.LoadScene("2d");
-        manager.score = 0;
+        //manager.score = 0;
     }
 }
