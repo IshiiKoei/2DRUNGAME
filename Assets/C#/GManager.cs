@@ -11,11 +11,14 @@ public class GManager : MonoBehaviour
     public int score;
     public int stageNum;
     public int continueNum;
-    [SerializeField] Button reset;
-    [SerializeField] GameObject gameoverCanvas;
-    [SerializeField] Transform playerTransform;
+    //[SerializeField] Button reset;
+    public GameObject resetpre;
+    //[SerializeField] GameObject gameoverCanvas;
+    public GameObject GameOverpre;
+    //[SerializeField] Transform playerTransform;
+    public GameObject Playerprehub;
+    public GameObject scoreprehub;
     //[SerializeField] GameObject clickstart;
-    
     public static  GManager instance;
     public Score point;
 
@@ -23,10 +26,10 @@ public class GManager : MonoBehaviour
 
     void Start()
     {
-        if(reset != null)
+        /*if(resetpre != null)
         {
-            reset.onClick.AddListener(RetryGame);
-        }
+            resetpre.onClick.AddListener(RetryGame);
+        }*/
 
     }
     void Awake()
@@ -55,9 +58,9 @@ public class GManager : MonoBehaviour
     }
     public void GameOver()
     {
-        playerTransform.gameObject.GetComponent<Renderer>().enabled = false;
+        Playerprehub.gameObject.GetComponent<Renderer>().enabled = false;
             /*SetActive(false);*/
-        gameoverCanvas.SetActive(true);
+        GameOverpre.SetActive(true);
         
 
     }

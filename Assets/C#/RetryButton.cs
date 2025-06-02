@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class RetryButton : MonoBehaviour
 {
-    [SerializeField] GManager manager;
+    //[SerializeField] GManager manager;
     public Button reset;
 
     void Start()
@@ -21,7 +21,7 @@ public class RetryButton : MonoBehaviour
     public void RetryGame()
     {
         SceneManager.LoadScene("restrat");
-        manager.score = 0;
+        GManager.instance.score = 0;
 
     }
 }

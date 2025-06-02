@@ -7,11 +7,17 @@ public class Score : MonoBehaviour
 {
     public Text scoreText;
     public int oldScore = 0;
+   
+   
     // Start is called before the first frame update
     void Start()
     {
         oldScore = 0;
         scoreText = GetComponent<Text>();
+        
+
+
+       // DontDestroyOnLoad(scoreText);
         if (GManager.instance != null)
         {
             scoreText.text = "Score"+ GManager.instance.score;
@@ -19,7 +25,6 @@ public class Score : MonoBehaviour
         else
         {
             Debug.Log("ゲームマネージャーを置き忘れてるよ");
-            Destroy(this);
         }
     }
 
@@ -31,6 +36,7 @@ public class Score : MonoBehaviour
             scoreText.text = "Score" + GManager.instance.score;
             oldScore = GManager.instance.score;
         }
+       
        
     }
 }
