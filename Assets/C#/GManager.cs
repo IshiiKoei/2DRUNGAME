@@ -58,7 +58,7 @@ public class GManager : MonoBehaviour
     }
     public void GameOver()
     {
-        Playerprehub.gameObject.GetComponent<Renderer>().enabled = false;
+        //Playerprehub.gameObject.GetComponent<Renderer>().enabled = false;
             /*SetActive(false);*/
         GameOverpre.SetActive(true);
         

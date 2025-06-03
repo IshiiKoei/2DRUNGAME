@@ -15,10 +15,14 @@ public class PlayerMove : MonoBehaviour
     public int score;
     private bool isJumping;
     private bool isStop;
+
+
+   // public float timer = 5.0f;
     //private PlayerAnimation playerAnimation;
     // Start is called before the first frame update
     void Start()
     {
+        isStop = false;
         rd = GetComponent<Rigidbody2D>();
         //playerAnimation = GetComponent<PlayerAnimation>();
         manager.score = 0;
@@ -77,16 +81,16 @@ public class PlayerMove : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D collision)
         //gameoverÇÃèåè
     {
-       
-    
         if(collision.gameObject.tag == "gameover")
         {
             //Destroy(this.gameObject);
             //manager.score = 0;
-            this.gameObject.GetComponent<Renderer>().enabled = false;
+            //this.gameObject.GetComponent<Renderer>().enabled = false;
+            Destroy(this.gameObject);
             manager.GameOver();
         }
     }
+    
     /*private void AnimatePlayer()
     {
         playerAnimation.PlayerJump(rd.velocity.y);
