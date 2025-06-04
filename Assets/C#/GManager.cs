@@ -61,6 +61,7 @@ public class GManager : MonoBehaviour
         //Playerprehub.gameObject.GetComponent<Renderer>().enabled = false;
             /*SetActive(false);*/
         GameOverpre.SetActive(true);
+        scoreprehub.SetActive(false);
         
 
     }
