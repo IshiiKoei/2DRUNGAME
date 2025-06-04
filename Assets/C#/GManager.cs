@@ -1,6 +1,7 @@
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -21,16 +22,25 @@ public class GManager : MonoBehaviour
     //[SerializeField] GameObject clickstart;
     public static  GManager instance;
     public Score point;
+    [SerializeField]
+    Text mileageText;
+    public int mileagea = 0;
+   public  bool timerIsActive = false;
+    public Coroutine timer;
+    float secondsPerMeter = 0.1f;
+    
 
     // Start is called before the first frame update
 
+    
+    
     void Start()
     {
         /*if(resetpre != null)
         {
             resetpre.onClick.AddListener(RetryGame);
         }*/
-
+        IsActive = true;
     }
     void Awake()
     {
@@ -50,11 +60,56 @@ public class GManager : MonoBehaviour
         }
         
     }
+    public bool IsActive { get; set; } = true;
+    public int Mileage
+    {
+        get
+        {
+            return mileagea;
+        }
+        set
+        {
+            mileagea = Mathf.Max(value, 0);
+
+            UpdateMileageUI();
+        }
+    }
+    void Update()
+    {
+        if ((!IsActive))
+        {
+            return;
+        }
+        if (!timerIsActive)
+        {
+            timer =
+                StartCoroutine(nameof(MileageTimer));
+        }
+    }
+    public void Startgame()
+    {
+        InitGame();
+        IsActive = true;
+    }
+    void InitGame()
+    {
+        Mileage = 0;
+        timerIsActive = false;
+    }
+    public IEnumerator MileageTimer()
+    {
+        timerIsActive = true;
+        Mileage++;
+        yield return new WaitForSeconds(secondsPerMeter);
+        timerIsActive = false;
+
+    }
     public void RetryGame()
     {
         point.oldScore = score;
         score = 0;
         SceneManager.LoadScene("restrat");
+        Startgame();
     }
     public void GameOver()
     {
@@ -62,8 +117,21 @@ public class GManager : MonoBehaviour
             /*SetActive(false);*/
         GameOverpre.SetActive(true);
         scoreprehub.SetActive(false);
-        
 
+        if (timer != null)
+        {
+            StopCoroutine(nameof(MileageTimer));
+            timerIsActive = false;
+        }
+        IsActive = false;
+        
+       
+     
+
+    }
+    void UpdateMileageUI()
+    {
+        mileageText.text = mileagea.ToString() + "m";
     }
     /*public void RetryGame()
     {
@@ -76,7 +144,7 @@ public class GManager : MonoBehaviour
         playerTransform.gameObject.SetActive(true );
         clickstart.SetActive(true);
     }*/
-   
+
 
 }
 

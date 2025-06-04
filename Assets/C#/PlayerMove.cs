@@ -14,7 +14,7 @@ public class PlayerMove : MonoBehaviour
     private Rigidbody2D rd;
     public int score;
     private bool isJumping;
-    private bool isStop;
+    
 
 
    // public float timer = 5.0f;
@@ -22,7 +22,7 @@ public class PlayerMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        isStop = false;
+        
         rd = GetComponent<Rigidbody2D>();
         //playerAnimation = GetComponent<PlayerAnimation>();
         manager.score = 0;

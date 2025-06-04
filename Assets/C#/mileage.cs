@@ -9,10 +9,30 @@ public class mileage : MonoBehaviour
     
     [SerializeField]
     Text mileageText;
-    int mileagea = 0;
-    bool timerIsActive = false;
-    Coroutine timer;
+   public int mileagea = 0;
+   public bool timerIsActive = false;
+    public Coroutine timer;
     float secondsPerMeter = 0.1f;
+    public static mileage instance;
+    public GameObject player;
+         void Awake()
+    {
+
+
+
+        if (instance != null)
+        {
+            Destroy(this.gameObject);
+
+        }
+        else
+        {
+            instance = this;
+
+            DontDestroyOnLoad(this.gameObject);
+        }
+
+    }
     // Start is called before the first frame update
     public int Mileage
     {
@@ -57,6 +77,7 @@ public class mileage : MonoBehaviour
         Mileage++;
         yield return new WaitForSeconds(secondsPerMeter);
         timerIsActive =false ;
+        
     }
     void UpdateMileageUI()
     {

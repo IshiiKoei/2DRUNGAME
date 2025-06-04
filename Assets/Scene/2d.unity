@@ -132,17 +132,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8890838711367749884, guid: d3b04d71e7d7123459fb5efbec3ad884, type: 3}
   m_PrefabInstance: {fileID: 1095528057}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &182655176 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9018666640220434908, guid: 3e2af79bf52e67240b266ed7bd9c1dfc, type: 3}
+  m_PrefabInstance: {fileID: 7105371081913823416}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &182655178 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8230892691781905055, guid: 3e2af79bf52e67240b266ed7bd9c1dfc, type: 3}
   m_PrefabInstance: {fileID: 7105371081913823416}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 182655176}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &182655180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 182655176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dde745e0932a5a44b8118f8bcd451df9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distancetext: {fileID: 182655178}
+  oscore: 0
 --- !u!1 &313334776
 GameObject:
   m_ObjectHideFlags: 0
@@ -1451,6 +1470,7 @@ GameObject:
   - component: {fileID: 995892852}
   - component: {fileID: 995892854}
   - component: {fileID: 995892853}
+  - component: {fileID: 995892855}
   m_Layer: 5
   m_Name: Text (Legacy)
   m_TagString: Untagged
@@ -1467,15 +1487,15 @@ RectTransform:
   m_GameObject: {fileID: 995892851}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8898646496796811430}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -306.85016, y: -525}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 0, y: 60}
+  m_SizeDelta: {x: 1200, y: 160}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &995892853
 MonoBehaviour:
@@ -1499,18 +1519,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 82
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 0
+    m_MaxSize: 83
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: "TOTAL SCORE\u3000:\u30000\n"
 --- !u!222 &995892854
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1519,6 +1539,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 995892851}
   m_CullTransparentMesh: 1
+--- !u!114 &995892855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995892851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2463f0dbc9d25614bb5366ca98e6be00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Totalscoretext: {fileID: 995892853}
+  tscore: 0
 --- !u!4 &1084122848 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 585310201473646494, guid: 7ef9a986b431ae44c92fcafb9fde198f, type: 3}
@@ -2684,12 +2718,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1726180527}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c178d459a5673c2468c9122f444f3a86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mileageText: {fileID: 182655178}
+  mileagea: 0
+  timerIsActive: 0
+  player: {fileID: 0}
 --- !u!1 &1808808019
 GameObject:
   m_ObjectHideFlags: 0
@@ -3261,12 +3298,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7106679169250214676, guid: 3e2af79bf52e67240b266ed7bd9c1dfc, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9018666640220434908, guid: 3e2af79bf52e67240b266ed7bd9c1dfc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 182655180}
   m_SourcePrefab: {fileID: 100100000, guid: 3e2af79bf52e67240b266ed7bd9c1dfc, type: 3}
 --- !u!1001 &8895601642608519219
 PrefabInstance:
@@ -3450,6 +3490,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7054646470275119858, guid: ebc4448873b4b264aacffd7a92c02f94, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 180
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -3483,6 +3527,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 837565165}
     - target: {fileID: 594815681700960502, guid: d5f53c59cca8d0740b62cffc6d87021b, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 594815681700960502, guid: d5f53c59cca8d0740b62cffc6d87021b, type: 3}
       propertyPath: resetpre
       value: 
       objectReference: {fileID: 1266552697}
@@ -3495,6 +3543,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2091909240}
     - target: {fileID: 594815681700960502, guid: d5f53c59cca8d0740b62cffc6d87021b, type: 3}
+      propertyPath: mileageText
+      value: 
+      objectReference: {fileID: 182655178}
+    - target: {fileID: 594815681700960502, guid: d5f53c59cca8d0740b62cffc6d87021b, type: 3}
       propertyPath: scoreprehub
       value: 
       objectReference: {fileID: 1107365845}
@@ -3502,6 +3554,10 @@ PrefabInstance:
       propertyPath: Playerprehub
       value: 
       objectReference: {fileID: 331533483}
+    - target: {fileID: 594815681700960502, guid: d5f53c59cca8d0740b62cffc6d87021b, type: 3}
+      propertyPath: timerIsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 594815681700960502, guid: d5f53c59cca8d0740b62cffc6d87021b, type: 3}
       propertyPath: gameoverCanvas
       value: 
