@@ -22,11 +22,12 @@ public class RetryButton : MonoBehaviour
     {
         SceneManager.LoadScene("restrat");
         GManager.instance.score = 0;
+        GManager.instance.mileagea = 0;
         //GManager.instance.mileagea = 0;
       //  GManager.instance.timerIsActive = false;
         //GManager.instance = null;
         //GManager.instance.IsActive = true;
-        GManager.instance.Startgame();
+        //GManager.instance.Startgame();
 
     }
 }

@@ -86,6 +86,7 @@ public class PlayerMove : MonoBehaviour
             //Destroy(this.gameObject);
             //manager.score = 0;
             //this.gameObject.GetComponent<Renderer>().enabled = false;
+            GManager.instance.IsActive = false;
             Destroy(this.gameObject);
             manager.GameOver();
         }

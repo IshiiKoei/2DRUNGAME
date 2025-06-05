@@ -109,7 +109,7 @@ public class GManager : MonoBehaviour
         point.oldScore = score;
         score = 0;
         SceneManager.LoadScene("restrat");
-        Startgame();
+       // Startgame();
     }
     public void GameOver()
     {

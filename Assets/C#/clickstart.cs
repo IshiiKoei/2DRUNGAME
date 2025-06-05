@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class clickstart : MonoBehaviour
 {
     [SerializeField] GManager manager;
+    //[SerializeField] GameObject GameObject;
     
      void Start()
     {
@@ -22,6 +23,8 @@ public class clickstart : MonoBehaviour
         resetscore = manager.score;
         resetscore = 0;
         Debug.Log(resetscore);
+       GManager.instance.Startgame();
+       // GManager.instance.IsActive = true;
         SceneManager.LoadScene("2d");
         //manager.score = 0;
     }
