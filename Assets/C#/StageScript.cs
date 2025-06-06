@@ -19,6 +19,9 @@ public class StageScript : MonoBehaviour
     //作ったステージチップの保持リスト
     public List<GameObject> generatedStageList = new List<GameObject>();
     // Start is called before the first frame update
+    [SerializeField]GameObject bloz;
+    [SerializeField] GameObject sil;
+    [SerializeField] GameObject gold;
     void Start()
     {
         //初期化処理
@@ -58,7 +61,9 @@ public class StageScript : MonoBehaviour
         GameObject stageObject = (GameObject)Instantiate
             (stageTips[nextStageTip],
             new Vector3(tipIndex * StageTipSize, 0, 0), Quaternion.identity) as GameObject;
-            
+            bloz.SetActive(true);
+            sil.SetActive(true);
+            gold.SetActive(true);
         return stageObject;
     }
     //一番古いステージを削除

@@ -21,7 +21,7 @@ public class coinsilver : MonoBehaviour
             if (GManager.instance != null)
             {
                 GManager.instance.score += myScore;
-                Destroy(this.gameObject);
+                this.gameObject.SetActive(false);
             }
         }
     }
