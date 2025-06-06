@@ -20,8 +20,14 @@ public class StageScript : MonoBehaviour
     public List<GameObject> generatedStageList = new List<GameObject>();
     // Start is called before the first frame update
     [SerializeField]GameObject bloz;
+    [SerializeField] GameObject bloz1;
+    [SerializeField] GameObject bloz2;
+    [SerializeField] GameObject bloz3;
+    [SerializeField] GameObject bloz4;
+    [SerializeField] GameObject blo5z;
     [SerializeField] GameObject sil;
     [SerializeField] GameObject gold;
+    [SerializeField] GameObject gold1;
     void Start()
     {
         //初期化処理
@@ -62,8 +68,14 @@ public class StageScript : MonoBehaviour
             (stageTips[nextStageTip],
             new Vector3(tipIndex * StageTipSize, 0, 0), Quaternion.identity) as GameObject;
             bloz.SetActive(true);
+            bloz1.SetActive(true);
+            bloz2.SetActive(true);
+            bloz3.SetActive(true);
+            bloz4.SetActive(true);
+            blo5z.SetActive(true);
             sil.SetActive(true);
             gold.SetActive(true);
+            gold1.SetActive(true);
         return stageObject;
     }
     //一番古いステージを削除
