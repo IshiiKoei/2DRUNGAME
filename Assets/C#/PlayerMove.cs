@@ -9,6 +9,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] public float moveSpeed = 1f;
     [SerializeField] private float jumpForce = 5f;
     [SerializeField] GManager manager;
+    public GameObject speedup;
     
 
     private Rigidbody2D rd;
@@ -94,7 +95,13 @@ public class PlayerMove : MonoBehaviour
         if(collision.gameObject.tag =="speedup")
         {
             moveSpeed +=0.075f;
+            speedup.SetActive(true);
+            Invoke("Speed", 1.0f);
         }
+    }
+    void Speed()
+    {
+        speedup.SetActive(false);
     }
     
     /*private void AnimatePlayer()
