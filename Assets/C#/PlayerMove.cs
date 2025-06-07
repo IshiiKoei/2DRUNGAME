@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 1f;
+    [SerializeField] public float moveSpeed = 1f;
     [SerializeField] private float jumpForce = 5f;
     [SerializeField] GManager manager;
     
@@ -14,6 +14,7 @@ public class PlayerMove : MonoBehaviour
     private Rigidbody2D rd;
     public int score;
     private bool isJumping;
+    //public static PlayerMove instance;
     
 
 
@@ -85,10 +86,14 @@ public class PlayerMove : MonoBehaviour
         {
             //Destroy(this.gameObject);
             //manager.score = 0;
-            //this.gameObject.GetComponent<Renderer>().enabled = false;
+            this.gameObject.GetComponent<Renderer>().enabled = false;
             GManager.instance.IsActive = false;
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
             manager.GameOver();
+        }
+        if(collision.gameObject.tag =="speedup")
+        {
+            moveSpeed +=0.075f;
         }
     }
     

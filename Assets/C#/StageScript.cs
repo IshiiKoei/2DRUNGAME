@@ -19,6 +19,7 @@ public class StageScript : MonoBehaviour
     //作ったステージチップの保持リスト
     public List<GameObject> generatedStageList = new List<GameObject>();
     // Start is called before the first frame update
+    public GameObject[] coin;
     [SerializeField]GameObject bloz;
     [SerializeField] GameObject bloz1;
     [SerializeField] GameObject bloz2;

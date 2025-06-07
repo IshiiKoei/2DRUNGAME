@@ -15,7 +15,7 @@ public class Totalscore : MonoBehaviour
         Totalscoretext = GetComponent<Text>();
         if (GManager.instance != null)
         {
-            Totalscoretext.text = "Totalscore" + GManager.instance.score*GManager.instance.mileagea;
+            Totalscoretext.text = "Totalscore"+ GManager.instance.score*GManager.instance.mileagea;
         }
         else
         {

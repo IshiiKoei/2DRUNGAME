@@ -102,6 +102,11 @@ public class GManager : MonoBehaviour
         Mileage++;
         yield return new WaitForSeconds(secondsPerMeter);
         timerIsActive = false;
+        /*if (mileagea > 50)
+        {
+            PlayerMove.instance.moveSpeed = 7.0f;
+        }*/
+
 
     }
     public void RetryGame()

@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class distance : MonoBehaviour
 {
     public Text distancetext;
-    public int oscore = 0;
+    public int  oscore = 0;
+    //public static distance instance;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +29,7 @@ public class distance : MonoBehaviour
     {
         if (oscore != GManager.instance.mileagea)
         {
-            distancetext.text = GManager.instance.mileagea.ToString()+"m";
+            distancetext.text =GManager.instance.mileagea.ToString()+"m";
             oscore = GManager.instance.mileagea;
         }
     }
