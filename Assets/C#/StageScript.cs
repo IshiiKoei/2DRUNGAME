@@ -20,6 +20,7 @@ public class StageScript : MonoBehaviour
     public List<GameObject> generatedStageList = new List<GameObject>();
     // Start is called before the first frame update
     public GameObject[] coin;
+    public int i = 5;
     [SerializeField]GameObject bloz;
     [SerializeField] GameObject bloz1;
     [SerializeField] GameObject bloz2;
@@ -29,11 +30,13 @@ public class StageScript : MonoBehaviour
     [SerializeField] GameObject sil;
     [SerializeField] GameObject gold;
     [SerializeField] GameObject gold1;
+    [SerializeField] GameObject teki;
     void Start()
     {
         //初期化処理
         currentTipIndex = startTipIndex - 1;
         UpdateStage(preInstantiate);
+        teki.SetActive(false);
     }
 
     // Update is called once per frame
@@ -77,6 +80,12 @@ public class StageScript : MonoBehaviour
             sil.SetActive(true);
             gold.SetActive(true);
             gold1.SetActive(true);
+       
+            if(GManager.instance.mileagea >i*50)
+            {
+                teki.SetActive(true);
+            }
+        
         return stageObject;
     }
     //一番古いステージを削除
