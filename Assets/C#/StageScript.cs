@@ -31,12 +31,14 @@ public class StageScript : MonoBehaviour
     [SerializeField] GameObject gold;
     [SerializeField] GameObject gold1;
     [SerializeField] GameObject teki;
+    [SerializeField] GameObject teki2;
     void Start()
     {
         //‰Šú‰»ˆ—
         currentTipIndex = startTipIndex - 1;
         UpdateStage(preInstantiate);
         teki.SetActive(false);
+        teki2.SetActive(false);
     }
 
     // Update is called once per frame
@@ -81,6 +83,10 @@ public class StageScript : MonoBehaviour
             gold.SetActive(true);
             gold1.SetActive(true);
        
+            if(GManager.instance.mileagea>i*30)
+        {
+            teki2.SetActive(true);
+        }
             if(GManager.instance.mileagea >i*50)
             {
                 teki.SetActive(true);
