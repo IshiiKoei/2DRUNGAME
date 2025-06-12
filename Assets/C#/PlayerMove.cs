@@ -16,6 +16,8 @@ public class PlayerMove : MonoBehaviour
     private Rigidbody2D rd;
     public int score;
     private bool isJumping;
+    private float timer2;
+    private float displayDelay = 1.0f;
     //public static PlayerMove instance;
     
 
@@ -29,6 +31,7 @@ public class PlayerMove : MonoBehaviour
         rd = GetComponent<Rigidbody2D>();
         //playerAnimation = GetComponent<PlayerAnimation>();
         manager.score = 0;
+        timer2 = 0.0f;
     }
 
     // Update is called once per frame
@@ -88,13 +91,21 @@ public class PlayerMove : MonoBehaviour
         {
             //Destroy(this.gameObject);
             //manager.score = 0;
-            Time.timeScale = 0;
+            //Time.timeScale = 0;
             //this.gameObject.GetComponent<Renderer>().enabled = false;
             GManager.instance.IsActive = false;
+            rd.isKinematic = true;
+            moveSpeed = 0;
+            rd.velocity = Vector2.zero;
+            
+            //timer += Time.deltaTime;
             //Destroy(this.gameObject);
-            Destroy(this, 3.0f);
+            //Destroy(this, 3.0f);
             //Invoke(nameof(GM), 1.0f);
-           manager.GameOver();
+                manager.GameOver();
+            
+
+            
         }
         if(collision.gameObject.tag =="speedup")
         {
