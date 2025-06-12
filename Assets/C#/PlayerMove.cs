@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 using UnityEditor.Build.Content;
 using UnityEngine;
 
@@ -87,10 +88,13 @@ public class PlayerMove : MonoBehaviour
         {
             //Destroy(this.gameObject);
             //manager.score = 0;
-            this.gameObject.GetComponent<Renderer>().enabled = false;
+            Time.timeScale = 0;
+            //this.gameObject.GetComponent<Renderer>().enabled = false;
             GManager.instance.IsActive = false;
             //Destroy(this.gameObject);
-            manager.GameOver();
+            Destroy(this, 3.0f);
+            //Invoke(nameof(GM), 1.0f);
+           manager.GameOver();
         }
         if(collision.gameObject.tag =="speedup")
         {
@@ -104,6 +108,10 @@ public class PlayerMove : MonoBehaviour
         speedup.SetActive(false);
     }
     
+   /* void GM()
+    {
+        manager.GameOver();
+    }*/
     /*private void AnimatePlayer()
     {
         playerAnimation.PlayerJump(rd.velocity.y);
