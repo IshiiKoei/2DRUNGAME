@@ -17,7 +17,7 @@ public class PlayerMove : MonoBehaviour
     public int score;
     private bool isJumping;
     private float timer2;
-    private float displayDelay = 1.0f;
+    private bool isTouch;
     //public static PlayerMove instance;
     
 
@@ -31,13 +31,23 @@ public class PlayerMove : MonoBehaviour
         rd = GetComponent<Rigidbody2D>();
         //playerAnimation = GetComponent<PlayerAnimation>();
         manager.score = 0;
-        timer2 = 0.0f;
+        timer2 = 1f;
+        isTouch = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         Jump();
+       /* if(isTouch )
+        {
+            timer2 -= Time.deltaTime;
+            if(timer2 <= 0 )
+            {
+                Destroy(this);
+            }
+
+        }*/
         
     }
     private void FixedUpdate()
@@ -97,7 +107,7 @@ public class PlayerMove : MonoBehaviour
             rd.isKinematic = true;
             moveSpeed = 0;
             rd.velocity = Vector2.zero;
-            
+            //isTouch = true;
             //timer += Time.deltaTime;
             //Destroy(this.gameObject);
             //Destroy(this, 3.0f);
