@@ -102,11 +102,10 @@ public class PlayerMove : MonoBehaviour
             //Destroy(this.gameObject);
             //manager.score = 0;
             //Time.timeScale = 0;
-            //this.gameObject.GetComponent<Renderer>().enabled = false;
+            this.gameObject.GetComponent<Renderer>().enabled = false;
             GManager.instance.IsActive = false;
             rd.isKinematic = true;
-            moveSpeed = 0;
-            rd.velocity = Vector2.zero;
+
             //isTouch = true;
             //timer += Time.deltaTime;
             //Destroy(this.gameObject);
@@ -116,6 +115,11 @@ public class PlayerMove : MonoBehaviour
             
 
             
+        }
+        if(collision.gameObject.tag =="kade")
+        {
+            moveSpeed = 0;
+            rd.velocity = Vector2.zero;
         }
         if(collision.gameObject.tag =="speedup")
         {
