@@ -28,7 +28,7 @@ public class Totalscore : MonoBehaviour
     {
         if(tscore != GManager.instance.score)
         {
-            Totalscoretext.text = "Totalscore" + GManager.instance.score*GManager.instance.mileagea;
+            Totalscoretext.text = "Totalscore  :  " + GManager.instance.score*GManager.instance.mileagea;
             tscore = GManager.instance.score*GManager.instance.mileagea;
         }
     }
