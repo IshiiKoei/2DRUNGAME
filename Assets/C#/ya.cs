@@ -24,14 +24,14 @@ public class ya : MonoBehaviour
         if (GManager.instance.mileagea > 200)
         {
             _time = _time + Time.deltaTime;
-            if (_time > 10f)
+            if (_time > 5.0f)
             {
                 float x = Random.Range(_rangeA.position.x, _rangeB.position.x);
                 float y = Random.Range(_rangeA.position.y, _rangeB.position.y);
                 float z = Random.Range(_rangeA.position.z, _rangeB.position.z);
                 Instantiate(_createprehub, new Vector3(x, y, z), _createprehub.transform.rotation);
                 _time = 0;
-                Destroy(_createprehub, 5.0f);
+               
             }
         }
     }
