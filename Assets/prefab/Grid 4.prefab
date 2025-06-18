@@ -1856,7 +1856,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9106683018318870420, guid: 42919f911b9da7e4f842c6aa9443f15d, type: 3}
       propertyPath: m_TagString
-      value: gameover
+      value: kabe
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2054,7 +2054,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9106683018318870420, guid: 42919f911b9da7e4f842c6aa9443f15d, type: 3}
       propertyPath: m_TagString
-      value: gameover
+      value: kabe
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2190,7 +2190,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9106683018318870420, guid: 42919f911b9da7e4f842c6aa9443f15d, type: 3}
       propertyPath: m_TagString
-      value: gameover
+      value: kabe
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2264,7 +2264,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9106683018318870420, guid: 42919f911b9da7e4f842c6aa9443f15d, type: 3}
       propertyPath: m_TagString
-      value: gameover
+      value: kabe
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2462,7 +2462,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9106683018318870420, guid: 42919f911b9da7e4f842c6aa9443f15d, type: 3}
       propertyPath: m_TagString
-      value: gameover
+      value: kabe
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2610,7 +2610,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9106683018318870420, guid: 42919f911b9da7e4f842c6aa9443f15d, type: 3}
       propertyPath: m_TagString
-      value: gameover
+      value: kabe
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
