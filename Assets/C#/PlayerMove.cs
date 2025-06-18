@@ -102,9 +102,10 @@ public class PlayerMove : MonoBehaviour
             //Destroy(this.gameObject);
             //manager.score = 0;
             //Time.timeScale = 0;
-            this.gameObject.GetComponent<Renderer>().enabled = false;
+            //this.gameObject.GetComponent<Renderer>().enabled = false;
             GManager.instance.IsActive = false;
             rd.isKinematic = true;
+            gameObject.SetActive(false);
 
             //isTouch = true;
             //timer += Time.deltaTime;
@@ -116,9 +117,10 @@ public class PlayerMove : MonoBehaviour
 
             
         }
-        if(collision.gameObject.tag =="kade")
+        if(collision.gameObject.tag =="kabe")
         {
-            moveSpeed = 0;
+            moveSpeed = -0.5f;
+           // rd.AddForce(new Vector2(-5.0f,0f), ForceMode2D.Impulse);
             rd.velocity = Vector2.zero;
         }
         if(collision.gameObject.tag =="speedup")
