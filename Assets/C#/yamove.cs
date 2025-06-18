@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class yamove : MonoBehaviour
 {
-    [SerializeField] float _movespeed = -2f;
+    [SerializeField] float _movespeed = -5f;
     Rigidbody2D _rd;
     // Start is called before the first frame update
     void Start()
