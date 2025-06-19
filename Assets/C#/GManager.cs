@@ -29,6 +29,7 @@ public class GManager : MonoBehaviour
     public Coroutine timer;
     float secondsPerMeter = 0.1f;
     
+    
 
     // Start is called before the first frame update
 
@@ -41,6 +42,7 @@ public class GManager : MonoBehaviour
             resetpre.onClick.AddListener(RetryGame);
         }*/
         IsActive = true;
+       
     }
     void Awake()
     {
@@ -122,6 +124,7 @@ public class GManager : MonoBehaviour
             /*SetActive(false);*/
         GameOverpre.SetActive(true);
         scoreprehub.SetActive(false);
+        
 
         if (timer != null)
         {

@@ -11,6 +11,9 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float jumpForce = 5f;
     [SerializeField] GManager manager;
     public GameObject speedup;
+    [SerializeField] public AudioSource a;
+    [SerializeField] public AudioSource b;
+    [SerializeField] public AudioClip _bu;
     
 
     private Rigidbody2D rd;
@@ -33,6 +36,7 @@ public class PlayerMove : MonoBehaviour
         manager.score = 0;
         timer2 = 1f;
         isTouch = false;
+        b.Play();
     }
 
     // Update is called once per frame
@@ -106,6 +110,8 @@ public class PlayerMove : MonoBehaviour
             GManager.instance.IsActive = false;
             rd.isKinematic = true;
             gameObject.SetActive(false);
+            b.Stop();
+
 
             //isTouch = true;
             //timer += Time.deltaTime;
@@ -122,6 +128,8 @@ public class PlayerMove : MonoBehaviour
             moveSpeed = -0.5f;
            // rd.AddForce(new Vector2(-5.0f,0f), ForceMode2D.Impulse);
             rd.velocity = Vector2.zero;
+            a.PlayOneShot(_bu);
+            
         }
         if(collision.gameObject.tag =="speedup")
         {
