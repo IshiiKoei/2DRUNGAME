@@ -13,7 +13,9 @@ public class PlayerMove : MonoBehaviour
     public GameObject speedup;
     [SerializeField] public AudioSource a;
     [SerializeField] public AudioSource b;
+    [SerializeField]public AudioSource c;
     [SerializeField] public AudioClip _bu;
+    [SerializeField] public AudioClip _ch;
     
 
     private Rigidbody2D rd;
@@ -106,13 +108,13 @@ public class PlayerMove : MonoBehaviour
             //Destroy(this.gameObject);
             //manager.score = 0;
             //Time.timeScale = 0;
-            //this.gameObject.GetComponent<Renderer>().enabled = false;
+           this.gameObject.GetComponent<Renderer>().enabled = false;
             GManager.instance.IsActive = false;
             rd.isKinematic = true;
-            gameObject.SetActive(false);
+           // gameObject.SetActive(false);
             b.Stop();
-
-
+            c.PlayOneShot(_ch);
+            moveSpeed = 3f;
             //isTouch = true;
             //timer += Time.deltaTime;
             //Destroy(this.gameObject);
@@ -125,7 +127,7 @@ public class PlayerMove : MonoBehaviour
         }
         if(collision.gameObject.tag =="kabe")
         {
-            moveSpeed = -0.5f;
+            moveSpeed = -0.7f;
            // rd.AddForce(new Vector2(-5.0f,0f), ForceMode2D.Impulse);
             rd.velocity = Vector2.zero;
             a.PlayOneShot(_bu);
