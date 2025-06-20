@@ -5,7 +5,7 @@ AnimatorOverrideController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Unitychan(Gun)
+  m_Name: Unitychan(Gun) - Copy
   m_Controller: {fileID: 9100000, guid: 29b85040416b841168ef873327c075e1, type: 2}
   m_Clips:
   - m_OriginalClip: {fileID: 7443434, guid: 29b85040416b841168ef873327c075e1, type: 2}
