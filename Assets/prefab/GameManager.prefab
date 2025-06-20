@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2392681940779494129}
   - component: {fileID: 594815681700960502}
+  - component: {fileID: 269187229801708464}
+  - component: {fileID: 5821844226603676573}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -47,3 +49,40 @@ MonoBehaviour:
   score: 0
   stageNum: 0
   continueNum: 0
+  resetpre: {fileID: 0}
+  GameOverpre: {fileID: 0}
+  Playerprehub: {fileID: 0}
+  scoreprehub: {fileID: 7106679169250214676, guid: 3e2af79bf52e67240b266ed7bd9c1dfc, type: 3}
+  point: {fileID: 0}
+  mileageText: {fileID: 0}
+  mileagea: 0
+  timerIsActive: 0
+--- !u!114 &269187229801708464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4954820769377703349}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 374273437daecd74985d7c07efcbe00b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameovertext: {fileID: 0}
+--- !u!114 &5821844226603676573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4954820769377703349}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c178d459a5673c2468c9122f444f3a86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mileageText: {fileID: 0}
+  mileagea: 0
+  timerIsActive: 0
+  player: {fileID: 0}
