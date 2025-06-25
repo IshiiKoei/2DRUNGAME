@@ -3164,7 +3164,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 750e1e485b3b42541ae3dab823666b90, type: 3}
+    m_Font: {fileID: 12800000, guid: 6ff508672a0e8e04e80b41096964896b, type: 3}
     m_FontSize: 82
     m_FontStyle: 0
     m_BestFit: 0
@@ -4978,21 +4978,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7747589499275909192, guid: 56750c552b52b254b87836983ab12c3f, type: 3}
       propertyPath: m_Size.y
-      value: 1.4538655
+      value: 1.6779108
       objectReference: {fileID: 0}
     - target: {fileID: 7747589499275909192, guid: 56750c552b52b254b87836983ab12c3f, type: 3}
       propertyPath: m_Offset.y
-      value: 1.0408349
+      value: 1.1528575
       objectReference: {fileID: 0}
     - target: {fileID: 8018075838440284651, guid: 56750c552b52b254b87836983ab12c3f, type: 3}
       propertyPath: m_Size.y
-      value: 0.67017365
+      value: 0.75164473
       objectReference: {fileID: 0}
     - target: {fileID: 8018075838440284651, guid: 56750c552b52b254b87836983ab12c3f, type: 3}
       propertyPath: m_Offset.y
-      value: 1.4326808
+      value: 1.4734163
       objectReference: {fileID: 0}
     - target: {fileID: 8777845121283046819, guid: 56750c552b52b254b87836983ab12c3f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9068088748465468423, guid: 56750c552b52b254b87836983ab12c3f, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -5961,7 +5965,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.9668832, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6214,6 +6218,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6499820264089693061, guid: ea5a1fa16a48806418920d00c995f045, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.97
+      objectReference: {fileID: 0}
     - target: {fileID: 6813483464115907095, guid: ea5a1fa16a48806418920d00c995f045, type: 3}
       propertyPath: m_TagString
       value: kabe
@@ -6365,6 +6373,10 @@ PrefabInstance:
     - target: {fileID: 2159655527757644217, guid: 7ef9a986b431ae44c92fcafb9fde198f, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3064119178559821064, guid: 7ef9a986b431ae44c92fcafb9fde198f, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6337182269234558323, guid: 7ef9a986b431ae44c92fcafb9fde198f, type: 3}
       propertyPath: a
@@ -6696,7 +6708,7 @@ PrefabInstance:
     - target: {fileID: 3287517819501236962, guid: ebc4448873b4b264aacffd7a92c02f94, type: 3}
       propertyPath: m_FontData.m_Font
       value: 
-      objectReference: {fileID: 12800000, guid: 750e1e485b3b42541ae3dab823666b90, type: 3}
+      objectReference: {fileID: 12800000, guid: 6ff508672a0e8e04e80b41096964896b, type: 3}
     - target: {fileID: 4194711867760204293, guid: ebc4448873b4b264aacffd7a92c02f94, type: 3}
       propertyPath: m_Name
       value: Canvas
