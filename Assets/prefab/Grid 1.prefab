@@ -1798,6 +1798,10 @@ PrefabInstance:
       value: "\u58C1\u306E\u5224\u5B9A"
       objectReference: {fileID: 0}
     - target: {fileID: 9106683018318870420, guid: 42919f911b9da7e4f842c6aa9443f15d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106683018318870420, guid: 42919f911b9da7e4f842c6aa9443f15d, type: 3}
       propertyPath: m_TagString
       value: kabe
       objectReference: {fileID: 0}
@@ -2432,6 +2436,10 @@ PrefabInstance:
     - target: {fileID: 9106683018318870420, guid: 42919f911b9da7e4f842c6aa9443f15d, type: 3}
       propertyPath: m_Name
       value: "\u58C1\u306E\u5224\u5B9A (1)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106683018318870420, guid: 42919f911b9da7e4f842c6aa9443f15d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9106683018318870420, guid: 42919f911b9da7e4f842c6aa9443f15d, type: 3}
       propertyPath: m_TagString

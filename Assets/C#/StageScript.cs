@@ -83,11 +83,11 @@ public class StageScript : MonoBehaviour
             gold.SetActive(true);
             gold1.SetActive(true);
        
-            if(GManager.instance.mileagea>i*30)
+            if(GManager.instance.mileagea>i*10)
         {
             teki2.SetActive(true);
         }
-            if(GManager.instance.mileagea >i*50)
+            if(GManager.instance.mileagea >i*30)
             {
                 teki.SetActive(true);
             }
