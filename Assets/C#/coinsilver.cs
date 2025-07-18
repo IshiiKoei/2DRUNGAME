@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class coinsilver : MonoBehaviour
+public class coinsilver : ItemBase
 {
     // Start is called before the first frame update
     public int myScore;
-    public PlayerTriggerCheck PlayerCheck;
+   // public PlayerTriggerCheck PlayerCheck;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,9 +14,10 @@ public class coinsilver : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public override void Get()
+
     {
-        if (PlayerCheck.isOn)
+        //if (PlayerCheck.isOn)
         {
             if (GManager.instance != null)
             {

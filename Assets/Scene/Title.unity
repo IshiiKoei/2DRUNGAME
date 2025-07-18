@@ -578,6 +578,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3998674593815173195, guid: 3e2af79bf52e67240b266ed7bd9c1dfc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7106679169250214676, guid: 3e2af79bf52e67240b266ed7bd9c1dfc, type: 3}
       propertyPath: m_Name
       value: Canvas 1
@@ -585,6 +589,10 @@ PrefabInstance:
     - target: {fileID: 7106679169250214676, guid: 3e2af79bf52e67240b266ed7bd9c1dfc, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9018666640220434908, guid: 3e2af79bf52e67240b266ed7bd9c1dfc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1087,7 +1095,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: STRAT
+  m_Text: START
 --- !u!222 &687822738
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2548,6 +2556,6 @@ SceneRoots:
   - {fileID: 686900079}
   - {fileID: 1432501796}
   - {fileID: 1258814855}
-  - {fileID: 261781022}
   - {fileID: 1374177878}
+  - {fileID: 261781022}
   - {fileID: 1627792492}
