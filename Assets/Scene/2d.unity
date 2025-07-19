@@ -5337,6 +5337,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bronze 0 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 112522990889121799, guid: 2d5739b9d9ba093429fb2ed820ccb430, type: 3}
+      propertyPath: m_TagString
+      value: Coin
+      objectReference: {fileID: 0}
     - target: {fileID: 1330334867116002378, guid: 2d5739b9d9ba093429fb2ed820ccb430, type: 3}
       propertyPath: m_SortingOrder
       value: 2
@@ -5834,6 +5838,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bronze 0 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 112522990889121799, guid: 2d5739b9d9ba093429fb2ed820ccb430, type: 3}
+      propertyPath: m_TagString
+      value: Coin
+      objectReference: {fileID: 0}
     - target: {fileID: 1330334867116002378, guid: 2d5739b9d9ba093429fb2ed820ccb430, type: 3}
       propertyPath: m_SortingOrder
       value: 2
@@ -6158,6 +6166,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: kabe
       objectReference: {fileID: 0}
+    - target: {fileID: 210715815482722566, guid: ea5a1fa16a48806418920d00c995f045, type: 3}
+      propertyPath: m_TagString
+      value: Coin
+      objectReference: {fileID: 0}
     - target: {fileID: 1386640498612914888, guid: ea5a1fa16a48806418920d00c995f045, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -6174,6 +6186,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2613529971507150367, guid: ea5a1fa16a48806418920d00c995f045, type: 3}
+      propertyPath: m_TagString
+      value: Coin
+      objectReference: {fileID: 0}
     - target: {fileID: 3633746125508474812, guid: ea5a1fa16a48806418920d00c995f045, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -6181,6 +6197,10 @@ PrefabInstance:
     - target: {fileID: 4016243548608498258, guid: ea5a1fa16a48806418920d00c995f045, type: 3}
       propertyPath: m_SortingOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4538423353419709921, guid: ea5a1fa16a48806418920d00c995f045, type: 3}
+      propertyPath: m_TagString
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 4669330418178001261, guid: ea5a1fa16a48806418920d00c995f045, type: 3}
       propertyPath: m_SortingOrder
@@ -6249,6 +6269,10 @@ PrefabInstance:
     - target: {fileID: 8647748666600210971, guid: ea5a1fa16a48806418920d00c995f045, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8788576348551222212, guid: ea5a1fa16a48806418920d00c995f045, type: 3}
+      propertyPath: m_TagString
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8959858240475791688, guid: ea5a1fa16a48806418920d00c995f045, type: 3}
       propertyPath: m_Name

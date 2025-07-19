@@ -9,6 +9,7 @@ TagManager:
   - gameover
   - speedup
   - kabe
+  - Coin
   layers:
   - Default
   - TransparentFX

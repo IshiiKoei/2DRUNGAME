@@ -10,4 +10,12 @@ public class Collect : MonoBehaviour
     {
         
     }
+    private  void OnTriggerEnter2D(Collision2D collision)
+    {
+       if(collision.gameObject.tag.Equals("Player"))
+        {
+           GetComponent<ItemBase>().Get();
+            
+        }
+    }
 }
